@@ -164,7 +164,7 @@ resource "aws_security_group" "web_sg" {
               apt install -y docker-ce
               systemctl status docker
 
-              docker run -p 80:80
+              docker run -p 80:80 matthiasvdsnb/lab4:latest
 
               EOF
   )
