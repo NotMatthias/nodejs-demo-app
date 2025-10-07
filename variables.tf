@@ -1,4 +1,6 @@
-variable "env" {}
+variable "env" {
+  default = "production"
+}
 variable "vpc_cidr" {
   type = list(string)
   default = ["10.0.0.0/16", "10.1.0.0/16"]
