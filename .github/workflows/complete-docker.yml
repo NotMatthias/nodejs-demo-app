@@ -1,4 +1,4 @@
-name: Build Example
+name: Docker Example
 
 # Controls when the workflow will run
 on:
