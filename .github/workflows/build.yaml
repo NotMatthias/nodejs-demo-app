@@ -42,7 +42,7 @@ jobs:
         with:
     # GitHub token used to authenticate API requests. Required for checking status checks and publishing releases. Use `secrets.GITHUB_TOKEN` or a PAT with elevated scopes if needed.
 
-          github-token: secrets.GITHUB_TOKEN
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 # The directory where your project is located, used as the base for making file paths in the report relative.
 
           working-directory: ./
