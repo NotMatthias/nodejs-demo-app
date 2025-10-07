@@ -45,7 +45,7 @@ jobs:
           github-token: secrets.GITHUB_TOKEN
 # The directory where your project is located, used as the base for making file paths in the report relative.
 
-          working-directory: /
+          working-directory: .
           # The path to the single code coverage report file you want to parse (e.g., 'build/reports/clover.xml').
       
           coverage-file: false
