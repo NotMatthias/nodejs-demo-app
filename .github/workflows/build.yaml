@@ -36,21 +36,11 @@ jobs:
       - run: npm test
 
       - name: Better Test Reports Action
-  # You may pin to the exact commit or the version.
-  # uses: mridang/action-test-reporter@720c9c56f73e527681bcb30c33da4ccd62bf70fb
-        uses: mridang/action-test-reporter@v1.3.0
+        uses: mridang/action-test-reporter@v1
         with:
-    # GitHub token used to authenticate API requests. Required for checking status checks and publishing releases. Use `secrets.GITHUB_TOKEN` or a PAT with elevated scopes if needed.
-
           github-token: ${{ secrets.GITHUB_TOKEN }}
-# The directory where your project is located, used as the base for making file paths in the report relative.
-
           working-directory: ./
-          # The path to the single code coverage report file you want to parse (e.g., 'build/reports/clover.xml').
-      
-          coverage-file: build/reports/clover.xml
-          # Set to `true` to upload the generated coverage report as a workflow artifact. If omitted or left empty, this defaults to `true`. Set to `false` to disable artifact upload.
-      
+          coverage-file: ./reports/clover.xml
           upload-coverage-report: true
                 
           
