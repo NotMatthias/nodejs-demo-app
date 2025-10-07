@@ -148,8 +148,8 @@ resource "aws_security_group" "web_sg" {
 }
 
     resource "aws_instance" "first_instance" {
-  ami           = ami-0360c520857e3138f
-  instance_type = t3.micro
+  ami           = "ami-0360c520857e3138f"
+  instance_type = "t3.micro"
   subnet_id = aws_subnet.public_subnet[0]
   associate_public_ip_address = true
   user_data = base64encode(
