@@ -33,14 +33,13 @@ jobs:
       - run: npm run build --if-present
 
       - name: test
-      - run: npm test
+      - run: npm test -- --coverage
 
-      - name: Better Test Reports Action
+      - name: Code Coverage Report
         uses: mridang/action-test-reporter@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverage-file: ./coverage/clover.xml # Path to your clover, cobertura, jacoco, or lcov file
           working-directory: ./
-          coverage-file: ./reports/clover.xml
-          upload-coverage-report: true
                 
           
