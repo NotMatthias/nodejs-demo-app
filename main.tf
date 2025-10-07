@@ -5,7 +5,7 @@ provider "aws" {
 locals {
   selected_vpc_cidr = var.vpc_cidr[0] 
   selected_public_cidr =[var.public_subnet_cidrs[0], var.public_subnet_cidrs[1]]
-  selected_private_cidr = [var.private_subnet_cidrs[0], var.private_subnet_cidrs[1]] : [var.private_subnet_cidrs[2], var.private_subnet_cidrs[3]]
+  selected_private_cidr = [var.private_subnet_cidrs[0], var.private_subnet_cidrs[1]]
 }
 
 
