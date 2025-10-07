@@ -9,6 +9,6 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 # Install dependencies (production only)
-RUN npm ci --only=production
+RUN npm install
 
 CMD [ "npm", "start" ]
