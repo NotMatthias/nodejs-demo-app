@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 locals {
-  selected_vpc_cidr = var.env == "production" ? var.vpc_cidr[0] : var.vpc_cidr[1]
-  selected_public_cidr = var.env == "production" ? [var.public_subnet_cidrs[0], var.public_subnet_cidrs[1]] : [var.public_subnet_cidrs[2], var.public_subnet_cidrs[3]]
-  selected_private_cidr = var.env == "production" ? [var.private_subnet_cidrs[0], var.private_subnet_cidrs[1]] : [var.private_subnet_cidrs[2], var.private_subnet_cidrs[3]]
+  selected_vpc_cidr = var.vpc_cidr[0] 
+  selected_public_cidr =[var.public_subnet_cidrs[0], var.public_subnet_cidrs[1]]
+  selected_private_cidr = [var.private_subnet_cidrs[0], var.private_subnet_cidrs[1]] : [var.private_subnet_cidrs[2], var.private_subnet_cidrs[3]]
 }
 
 
@@ -14,7 +14,7 @@ resource "aws_vpc" "app_vpc" {
   enable_dns_support = true
   enable_dns_hostnames = true
   tags = {
-    Name = "${var.env}-vpc"
+    Name = "PROD-vpc"
   }
 }
 
